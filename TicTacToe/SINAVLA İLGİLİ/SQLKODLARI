@@ -1,0 +1,12 @@
+try {
+					Statement st = db.baglantiAc();
+					ResultSet rs = st.executeQuery("SELECT * FROM  PlayerInformation WHERE playerID= " + id);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				String sql = "INSERT INTO TicTacToe.PlayerInformation (PlayerName, playerID, totalWinning) VALUES ("
+	                    + "'" + name + "', "
+	                    + "'" + id + "', "
+	                    + "'" + total + "')";

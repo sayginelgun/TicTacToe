@@ -1,0 +1,18 @@
+use TicTacToe;
+DROP TABLE IF EXISTS `PlayerInformation`;
+CREATE TABLE `PlayerInformation`(
+`PlayerName` VARCHAR(30) NOT NULL,
+`playerID` INT NOT NULL UNIQUE,
+`totalWinning` INT NOT NULL,
+PRIMARY KEY (`playerID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `GameInformation`;
+CREATE TABLE `GameInformation`(
+`GameNumber` INT NOT NULL unique,
+`playerID` INT NOT NULL UNIQUE,
+`winner` VARCHAR(30) NOT NULL,
+PRIMARY KEY (`GameNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+use TicTacToe;
+select * from `GameInformation`;
